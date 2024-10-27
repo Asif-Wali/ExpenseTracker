@@ -12,7 +12,7 @@ function ExpenseItem({id, description, amount, date }) {
   return (
     <Pressable
       onPress={expensePressHandler}
-      style={(pressed) => pressed && styles.pressed}
+      style={({pressed}) => pressed && styles.pressed}
     >
       <View style={styles.expenseItem}>
         <View>
@@ -41,10 +41,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     elevation: 3,
-    shadowColor: GlobalStyles.colors.gray500,
-    shadowOffset: { width: 1, height: 1 },
-    shadowRadius: 4,
-    shadowOpacity: 0.4,
+    // shadowColor: GlobalStyles.colors.gray500,
+    // shadowOffset: { width: 1, height: 1 },
+    // shadowRadius: 4,
+    // shadowOpacity: 0.4,
   },
   textbase: {
     color: GlobalStyles.colors.primary50,
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 4,
     justifyContent: "center",
-    backgroundColor: "white",
+    backgroundColor: "#fff",
     alignItems: "center",
     borderRadius: 4,
     minWidth: 70,

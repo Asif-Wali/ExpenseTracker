@@ -69,7 +69,7 @@ function ExpenseForm({ onCancel, submitButtonlabel, onSubmit, defaultValues }) {
           label="Amount"
           inValid= {!inputs.amount.isValid}
           textInputConfig={{
-            keyBoardType: "numeric",
+            keyboardType: "decimal-pad",
             onChangeText: inputChangeHandler.bind(this, "amount"),
             value: inputs.amount.value,
           }}
